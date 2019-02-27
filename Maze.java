@@ -79,6 +79,14 @@ public class Maze{
     */
     public int solve(){
 
+
+      for(int i = 0; i < maze.length; i++){
+        for int j = 0; j < maze.length; j++){
+          if(maze[i][j].equals("s")){
+            
+          }
+        }
+      }
             //find the location of the S.
 
 

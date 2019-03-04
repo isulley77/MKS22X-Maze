@@ -1,10 +1,15 @@
 import java.util.*;
 import java.io.*;
+
+
 public class Maze{
 
 
     private char[][]maze;
     private boolean animate;//false by default
+    
+    int width;
+    int height;
 
     /*Constructor loads a maze text file, and sets animate to false by default.
 
@@ -25,7 +30,11 @@ public class Maze{
     */
 
     public Maze(String filename) throws FileNotFoundException{
-        //COMPLETE CONSTRUCTOR
+        
+        File map = new File(filename);
+        Scanner s = new Scanner(map);
+        
+       
     }
 
 
@@ -64,9 +73,7 @@ public class Maze{
 
     */
     public String toString(){
-
-            return "WRITE THIS METHOD";
-
+      
     }
 
 
@@ -81,7 +88,7 @@ public class Maze{
 
 
       for(int i = 0; i < maze.length; i++){
-        for int j = 0; j < maze.length; j++){
+        for(int j = 0; j < maze.length; j++){
           if(maze[i][j].equals("s")){
             
           }

@@ -34,6 +34,23 @@ public class Maze{
         File map = new File(filename);
         Scanner s = new Scanner(map);
         
+        int counter = 0;
+        String l;
+        
+        while(s.hasNextLine()){
+            
+            l = s.nextLine();
+            width = l.length();
+            for(int i = 0; i < l.length(); i++){
+            
+                maze[counter][i] = l.charAt(i);
+            }
+            
+            counter++;
+        }
+        
+        height = counter;
+        
        
     }
 
@@ -74,6 +91,7 @@ public class Maze{
     */
     public String toString(){
       
+      return "gang";
     }
 
 
@@ -89,7 +107,8 @@ public class Maze{
 
       for(int i = 0; i < maze.length; i++){
         for(int j = 0; j < maze.length; j++){
-          if(maze[i][j].equals("s")){
+          if(maze[i][j].equals('S')){
+            
             
           }
         }

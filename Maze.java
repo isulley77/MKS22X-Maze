@@ -107,9 +107,10 @@ public class Maze{
 
       for(int i = 0; i < maze.length; i++){
         for(int j = 0; j < maze.length; j++){
-          if(maze[i][j].equals('S')){
+          if(maze[i][j] == 'S'){
             
-            
+            maze[i][j] = ' ';
+            return solve(i, j);
           }
         }
       }
@@ -122,7 +123,7 @@ public class Maze{
             //and start solving at the location of the s.
 
             //return solve(???,???);
-
+        return -1;
     }
 
     /*

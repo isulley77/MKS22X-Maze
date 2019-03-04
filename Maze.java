@@ -91,7 +91,19 @@ public class Maze{
     */
     public String toString(){
       
-      return "gang";
+      String Smaze = "";
+        
+        for(int i = 0; i < height; i++){
+            
+            for(int j = 0; j < width; j++){
+            
+                Smaze += maze[i][j];
+            }
+            
+            Smaze += "\n";
+        }
+        
+        return Smaze;
     }
 
 

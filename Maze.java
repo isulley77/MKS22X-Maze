@@ -157,6 +157,40 @@ public class Maze{
     */
     private int solve(int row, int col){ //you can add more parameters since this is private
 
+    
+        if(maze[row][col] == 'E'){
+            return 1;
+        }
+        
+        maze[row][col] = '@';
+        int counter;
+        System.out.println(toString());
+        if(maze[row + 1][col] != '@' && maze[row + 1][col] != '.' && maze[row + 1][col] != '#'){
+            counter = solve(row + 1, col);
+            if(counter != -1){
+                return 1 + counter;
+            }
+        }
+        if(maze[row - 1][col] != '@' && maze[row - 1][col] != '.' && maze[row - 1][col] != '#'){
+            counter = solve(row + 1, col);
+            if(counter != -1){
+                return 1 + counter;
+            }
+        }
+        if(maze[row][col + 1] != '@' && maze[row][col + 1] != '.' && maze[row][col + 1] != '#'){
+            counter = solve(row + 1, col);
+            if(counter != -1){
+                return 1 + counter;
+            }
+        }
+        if(maze[row][col - 1] != '@' && maze[row][col - 1] != '.' && maze[row][col - 1] != '#'){
+            counter = solve(row + 1, col);
+            if(counter != -1){
+                return 1 + counter;
+            }
+        }
+            
+        
 
         //automatic animation! You are welcome.
         if(animate){
@@ -168,7 +202,7 @@ public class Maze{
         }
 
         //COMPLETE SOLVE
-
+        maze[row][col] = '.';
         return -1; //so it compiles
     }
 

@@ -41,16 +41,12 @@ public class Maze{
             
             l = s.nextLine();
             width = l.length();
-            for(int i = 0; i < l.length(); i++){
-            
-                maze[counter][i] = l.charAt(i);
-            }
-            
             counter++;
         }
         
         height = counter;
-        
+        maze = new char[height][width];
+       counter = 0;
        
     }
 
@@ -205,6 +201,5 @@ public class Maze{
         maze[row][col] = '.';
         return -1; //so it compiles
     }
-
-
+ 
 }
